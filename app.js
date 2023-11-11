@@ -27,10 +27,46 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 //select
-pool.query('select * from empleados').then(function
-  (resultados) {
-    console.log(resultados);
-  });
+//pool.query('select * from empleados').then(function
+//  (resultados) {
+//    console.log(resultados);
+//  });
+
+//INSERTAR
+/*var obj = {
+  nombre: 'Juan',
+  apellido: 'Lopez',
+  trabajo: 'docente',
+  edad: 38,
+  salario: 1500,
+  email: 'juanlopez@gmail.com'
+}
+
+pool.query('insert into empleados set ?', [obj]).then
+(function (resultados) {
+  console.log(resultados)
+});*/
+
+//UPDATE
+
+/*var id = 22;
+var obj = {
+  nombre: 'Pablo',
+  apellido: 'Gomez'
+}
+
+pool.query('update empleados set ? where id=?', [obj,
+  id]).then(function(resultados){
+  console.log(resultados);
+});*/
+
+//BORRAR
+/*var id = 33
+pool.query('delete from empleados where id=?',[id]).then(function (resultados){
+  console.log(resultados);
+});*/
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
